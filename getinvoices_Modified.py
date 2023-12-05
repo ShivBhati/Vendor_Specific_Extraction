@@ -19,18 +19,18 @@ HEADERS = {
 
 def create_df(records):
     column = ['Invoice Date','Beneficiary Name','Due Date','Grand Total','Service Code',
-                       'Client Number','Invoice #','Confirmation Number','Line Item Number','Cost Description',
+                       'ClientNumber','Invoice #','Confirmation Number','Line Item Number','Cost Description',
                        'GL Description #1','GL Description #2','Gl Account #','Sub Account #','Bank','Status',
-                       'Terms Code','Date of Order','Transaction Type','Detail Type','Currency','Currencydate',
+                       'Terms Code','Date of Order','Transaction Type','Detail Type','Currency','Currency Date',
                        'Office','Tax Code']
     
     data = ({'Invoice Date': records.get('field_2'),'Beneficiary Name': records.get('field_3'),'Due Date': records.get('field_4'),
-                       'Grand Total':records.get('field_5'),'Service Code': records.get('field_6'),'Client Number': records.get('field_7'),'Invoice #':records.get('field_8'),
+                       'Grand Total':records.get('field_5'),'Service Code': records.get('field_6'),'ClientNumber': records.get('field_7'),'Invoice #':records.get('field_8'),
                        'Confirmation Number':records.get('field_9'),'Line Item Number':records.get('field_10'),
                        'Cost Description':records.get('field_11'),'GL Description #1':records.get('field_12'),'GL Description #2':records.get('field_13'),
                        'Gl Account #':records.get('field_14'),'Sub Account #' :records.get('field_15'),'Bank' :records.get('field_16'),'Status' :records.get('field_17'),
                        'Terms Code' :records.get('field_18'),'Date of Order' :records.get('field_19'),'Transaction Type' :records.get('field_20'),
-                       'Detail Type' :records.get('field_21'),'Currency' :records.get('field_22'),'Currencydate' :records.get('field_23'),'Office':records.get('field_24'),
+                       'Detail Type' :records.get('field_21'),'Currency' :records.get('field_22'),'Currency Date' :records.get('field_23'),'Office':records.get('field_24'),
                        'Tax Code':records.get('field_25')})
     df = pd.DataFrame([data], columns = column)
     return df
@@ -53,9 +53,9 @@ def create_Vendor_Specific_Csv(records):
     vendor = 'N'
     
     column = ['Invoice Date','Beneficiary Name','Due Date','Grand Total','Service Code',
-                       'Client Number','Invoice #','Confirmation Number','Line Item Number','Cost Description',
+                       'ClientNumber','Invoice #','Confirmation Number','Line Item Number','Cost Description',
                        'GL Description #1','GL Description #2','Gl Account #','Sub Account #','Bank','Status',
-                       'Terms Code','Date of Order','Transaction Type','Detail Type','Currency','Currencydate',
+                       'Terms Code','Date of Order','Transaction Type','Detail Type','Currency','Currency Date',
                        'Office','Tax Code']
     df1 = pd.DataFrame(columns = column)
     record_data = {'column_name': column}
