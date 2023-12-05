@@ -123,7 +123,7 @@ def save_records_to_csv(x,vendor):
     # testdrive2 = f"B:\\Python\\Git\\Knack_Voucher_detail_Extraction\\Test2\\vchr3eloadfile_{vendor}_{currentdatetime}.csv"
    # Function to save records to a given filename
     def write_to_csv(filename):
-        x.to_csv(filename, encoding='utf-8')
+        x.to_csv(filename,index = False, encoding='utf-8')
         status = print(f"A file is created with the name of {filename}")
         return status
     # Save to both file locations
